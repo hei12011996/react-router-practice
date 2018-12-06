@@ -8,14 +8,16 @@ import NotFoundPage from './components/NotFoundPage'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <ul>
-            <Link to="/about">about</Link>
+            <li><Link to="/">home</Link></li>
+            <li><Link to="/user">user</Link></li>
+            <li><Link to="/about">about</Link></li>
         </ul>
         <hr/>
         <Switch>
           <Route path="/" exact component={() => <h1>home page</h1>} />
-          <Route path="/user" component=={() => <h1>user page</h1>} />
+          <Route path="/user" component={() => <h1>user page</h1>} />
           <Route path="/about" component={AboutPage} />
           <Route component={NotFoundPage} />
         </Switch>
